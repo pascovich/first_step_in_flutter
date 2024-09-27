@@ -1,98 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/events_Page.dart';
+import 'package:flutter_app/pages/dashboard_page.dart';
+// import 'package:flutter_app/pages/home_page.dart';
 
 void main() {
-  runApp(MaterialApp(
-    theme: ThemeData(colorSchemeSeed: Colors.blue),
-    home: const HomePage(),
-    // home: const HomePage(),
-    debugShowCheckedModeBanner: false,
-  ));
+  runApp(const MyApp());
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-  @override
-  State<HomePage> createState() {
-    return HomePageState();
-  }
-}
-
-class HomePageState extends State<HomePage> {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            // foregroundColor: Colors.pinkAccent,
-            // backgroundColor: Colors.pinkAccent,
-            // leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
-            title: const Text("E-Booking"),
-            // title: const Center(child: Text("E-Booking")),
-            elevation: 10,
-            actions: [
-              IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-              IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
-            ]),
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              const DrawerHeader(
-                child: Text("Menu"),
-                // decoration: BoxDecoration(color: Colors.blue),
-              ),
-              ListTile(
-                leading: const Icon(Icons.account_box),
-                title: const Text("Profile"),
-                subtitle: const Text("Mes informations"),
-                trailing: const Icon(Icons.chevron_right),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: const Icon(Icons.help),
-                title: const Text("Help"),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: const Icon(Icons.settings),
-                title: const Text("Parametres"),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: const Icon(Icons.logout),
-                title: const Text("Logout"),
-                onTap: () {},
-              ),
-            ],
-          ),
-        ),
-        body: const Center(child: Text("menus fluterdd")),
-        bottomNavigationBar: Container(
-            decoration: const BoxDecoration(
-                border:
-                    Border(top: BorderSide(color: Colors.grey, width: 0.4))),
-            child: NavigationBar(
-                // selectedIndex: pageIndex,
-                onDestinationSelected: (int index) {
-                  // setState(() {
-                  //   pageIndex = index;
-                  // });
-                },
-                backgroundColor: Colors.white,
-                destinations: [
-                  NavigationDestination(
-                      icon: Icon(Icons.alarm), label: "Evenements"),
-                  NavigationDestination(
-                      icon: Icon(Icons.book_rounded),
-                      label: "Mes reservations"),
-                  NavigationDestination(
-                      icon: Icon(Icons.account_box), label: "Profile"),
-                  NavigationDestination(
-                      icon: Icon(Icons.phone), label: "Appels"),
-                ])),
-        floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.add),
-          onPressed: () {},
-        ));
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      // home: const HomePage(),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const DashboardPage(),
+        '/events': (context) => const EventsPage(),
+        // Add more routes here as needed
+      },
+    );
   }
 }
