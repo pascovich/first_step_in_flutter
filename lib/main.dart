@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/events_Page.dart';
-import 'package:flutter_app/pages/dashboard_page.dart';
+import 'package:flutter_app/pages/index_page.dart';
 // import 'package:flutter_app/pages/home_page.dart';
 
 void main() {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const DashboardPage(),
+        '/': (context) => const IndexPage(),
         '/events': (context) => const EventsPage(),
         // Add more routes here as needed
       },
