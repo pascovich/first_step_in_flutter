@@ -13,10 +13,10 @@ class IndexPage extends StatefulWidget {
 
 class _IndexPageState extends State<IndexPage> {
   List pages = [
-    DashboardPage(),
-    EventsPage(),
-    BookingPage(),
-    ProfilePage(),
+    const DashboardPage(),
+    const EventsPage(),
+    const BookingPage(),
+    const ProfilePage(),
   ];
 
   int pageIndex = 0;
