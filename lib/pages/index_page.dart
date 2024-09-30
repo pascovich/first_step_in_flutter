@@ -24,18 +24,18 @@ class _IndexPageState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            // foregroundColor: Colors.pinkAccent,
-            // backgroundColor: Colors.pinkAccent,
-            // leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
-            title: const Text("E-Booking"),
-            // title: const Center(child: Text("E-Booking")),
-            elevation: 10,
-            actions: [
-              IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-              IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
-            ]),
+        // appBar: AppBar(
+        //     backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        //     // foregroundColor: Colors.pinkAccent,
+        //     // backgroundColor: Colors.pinkAccent,
+        //     // leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+        //     title: const Text("E-Booking"),
+        //     // title: const Center(child: Text("E-Booking")),
+        //     elevation: 10,
+        //     actions: [
+        //       IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+        //       IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
+        //     ]),
         drawer: Drawer(
           child: ListView(
             children: [
@@ -81,7 +81,7 @@ class _IndexPageState extends State<IndexPage> {
                   });
                 },
                 backgroundColor: Colors.white,
-                destinations: [
+                destinations: const [
                   NavigationDestination(
                       icon: Icon(Icons.bar_chart), label: "Index"),
                   NavigationDestination(
