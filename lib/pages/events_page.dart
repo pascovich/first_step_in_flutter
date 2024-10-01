@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/components/Event_widget.dart';
 import 'package:flutter_app/pages/events_details.dart';
 import 'package:flutter_app/components/Hero_widget.dart';
+import 'package:flutter_app/components/Categorie_widget2.dart';
 
 class EventsPage extends StatefulWidget {
   const EventsPage({super.key});
@@ -49,47 +51,13 @@ class _EventsPageState extends State<EventsPage> {
           elevation: 10,
         ),
         body: ListView(
-          children: [
-            const Padding(
+          children: const [
+            Padding(
               padding: EdgeInsets.all(8.0),
               child: HeroWidget(),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text("Categorie"),
-            const SizedBox(
-              height: 10,
-            ),
-            SizedBox(
-              height: 100,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  SizedBox(width: 10),
-                  Container(
-                    width: 100,
-                    color: Colors.red,
-                  ),
-                  SizedBox(width: 10),
-                  Container(
-                    width: 100,
-                    color: Colors.red,
-                  ),
-                  SizedBox(width: 10),
-                  Container(
-                    width: 100,
-                    color: Colors.red,
-                  ),
-                  SizedBox(width: 10),
-                  Container(
-                    width: 100,
-                    color: Colors.red,
-                  ),
-                  SizedBox(width: 10),
-                ],
-              ),
-            )
+            Padding(padding: EdgeInsets.all(3.0), child: CategorieWidget2()),
+            Padding(padding: EdgeInsets.only(left: 3.0), child: EventWidget()),
           ],
         ));
   }

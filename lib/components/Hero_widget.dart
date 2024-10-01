@@ -12,19 +12,22 @@ class _HeroWidgetState extends State<HeroWidget> {
     {
       'code': 'Voyage au kenya',
       'title': 'maked your online jorney',
-      'image':
+      'image': 'assets/images/b1.jfif',
+      'imageLine':
           'https://th.bing.com/th/id/R.da9b5dbb601dec1a5060909fceff588f?rik=pu6oJO39PEE%2bRQ&pid=ImgRaw&r=0'
     },
     {
       'code': 'Go away from',
       'title': 'in your make dvshd nuorfer',
-      'image':
+      'image': 'assets/images/b2.jpg',
+      'imageLine':
           'https://pixnio.com/free-images/2017/10/25/2017-10-25-14-43-24.jpg'
     },
     {
       'code': 'Journey in Paris',
       'title': 'pour tout vos paris spoartif',
-      'image':
+      'image': 'assets/images/b3.jfif',
+      'imageLine':
           'https://th.bing.com/th/id/R.e8409546bb2f8dffaf5e6c27c106d976?rik=0iylvn%2flxrwIng&riu=http%3a%2f%2fimg.20mn.fr%2f8yVNHz5SR42-wbLyndTHdA%2f2048x1536-fit_vue-ensemble-ville-paris.jpg&ehk=jhk17YiHAppELUoECyR9RvbTLATEVsFPCS0c8J%2fIp78%3d&risl=&pid=ImgRaw&r=0'
     }
   ];
@@ -49,7 +52,7 @@ class _HeroWidgetState extends State<HeroWidget> {
       width: double.infinity,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: NetworkImage(_infos[_currentInfo]['image']!),
+              image: AssetImage(_infos[_currentInfo]['image']!),
               fit: BoxFit.cover),
           color: Colors.blue,
           borderRadius: BorderRadius.circular(19)),
