@@ -29,43 +29,46 @@ class _HeroWidgetState extends State<HeroWidget> {
     }
   ];
   int _currentInfo = 0;
+  final _pageController = PageController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController.addListener(() {
+      setState(() {
+        _currentInfo = _pageController.page!.round();
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 200,
       width: double.infinity,
       decoration: BoxDecoration(
-          color: Colors.blue, borderRadius: BorderRadius.circular(19)),
-      child: Stack(
-        children: [
-          Container(
-            width: double.infinity,
-            height: double.infinity,
-            padding: EdgeInsets.only(bottom: 17),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: _infos.map((infos) => _buildPagination(infos)).toList(),
-            ),
+          image: DecorationImage(
+              image: NetworkImage(_infos[_currentInfo]['image']!),
+              fit: BoxFit.cover),
+          color: Colors.blue,
+          borderRadius: BorderRadius.circular(19)),
+      child: Stack(children: [
+        PageView(
+          controller: _pageController,
+          children: _infos.map((info) => _buildInfo(info)).toList(),
+        ),
+        Container(
+          width: double.infinity,
+          height: double.infinity,
+          padding: const EdgeInsets.only(bottom: 17),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: _infos.map((infos) => _buildPagination(infos)).toList(),
           ),
-          Positioned(
-              top: 20,
-              left: 20,
-              child: Text(_infos[_currentInfo]['code']!.toUpperCase(),
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold))),
-          Positioned(
-              top: 60,
-              left: 20,
-              child: Text(_infos[_currentInfo]['title']!,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ))),
-        ],
-      ),
+        ),
+      ]),
     );
   }
 
@@ -100,6 +103,29 @@ class _HeroWidgetState extends State<HeroWidget> {
       //     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
       //   ),
       // ),
+    );
+  }
+
+  Widget _buildInfo(Map<String, String> info) {
+    return Stack(
+      children: [
+        Positioned(
+            top: 20,
+            left: 20,
+            child: Text(_infos[_currentInfo]['code']!.toUpperCase(),
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold))),
+        Positioned(
+            top: 60,
+            left: 20,
+            child: Text(_infos[_currentInfo]['title']!,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ))),
+      ],
     );
   }
 }
