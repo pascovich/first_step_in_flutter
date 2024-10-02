@@ -8,9 +8,13 @@ class ProductService {
   List products = [
     {
       "id": "1",
-      "name": "Produit 1",
+      "name": "Evenement 1",
       "price": 10.0,
-      "description": "Description du produit 1",
+      "date": "12/20/2030",
+      "heure": "12h 00,GMT",
+      "place": "RDC - Goma",
+      "persons": 50,
+      "description": "Description du Evenement 1",
       "image": "assets/images/1.jpg",
       "imageLine":
           "https://st.depositphotos.com/1053646/1770/i/450/depositphotos_17700789-stock-photo-dance-club.jpg",
@@ -18,9 +22,12 @@ class ProductService {
     },
     {
       "id": "2",
-      "name": "Produit 2",
+      "name": "Evenement 2",
       "price": 20.0,
-      "description": "Description du produit 2",
+      "date": "01/10/2010",
+      "heure": "12h 00,GMT",
+      "place": "RDC - Goma",
+      "description": "Description du Evenement 2",
       "image": "assets/images/2.jfif",
       "imageLine":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfYMxkPgJymWL1zWEvxktsdcXatHU-yFPLrg&s",
@@ -28,9 +35,12 @@ class ProductService {
     },
     {
       "id": "3",
-      "name": "Produit 3",
+      "name": "Evenement 3",
       "price": 30.0,
-      "description": "Description du produit 3",
+      "date": "12/12/2020",
+      "heure": "12h 00,GMT",
+      "place": "RDC - Goma",
+      "description": "Description du Evenement 3",
       "image": "assets/images/3.jfif",
       "imageLine":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLar8sug98DCm_96Abw6KWUazMe-QjUtu2Dg&s",
@@ -38,9 +48,12 @@ class ProductService {
     },
     {
       "id": "4",
-      "name": "Produit 4",
+      "name": "Evenement 4",
       "price": 40.0,
-      "description": "Description du produit 4",
+      "date": "11/03/2024",
+      "heure": "22h 00,GMT",
+      "place": "RDC - Goma",
+      "description": "Description du Evenement 4",
       "image": "assets/images/4.jfif",
       "imageLine":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJs1wkJigJPv994C21bjRQT8QT7LilQ-PA9A&s",
@@ -48,9 +61,12 @@ class ProductService {
     },
     {
       "id": "5",
-      "name": "Produit 5",
+      "name": "Conference sur les energies de a phh",
       "price": 50.0,
-      "description": "Description du produit 5",
+      "date": "01/10/2022",
+      "heure": "12h 00,GMT",
+      "place": "RDC - Goma",
+      "description": "Description du Evenement 5",
       "image": "assets/images/5.jpg",
       "imageLine":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI2Gw6klZzMQMGEFl8z1E16USZoWYhpBBbtA&s",

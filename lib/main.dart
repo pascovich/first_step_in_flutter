@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/events_Page.dart';
+import 'package:flutter_app/pages/events_details.dart';
 import 'package:flutter_app/pages/index_page.dart';
 // import 'package:flutter_app/pages/home_page.dart';
 
@@ -25,6 +26,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const IndexPage(),
         '/events': (context) => const EventsPage(),
+        '/details': (context) {
+          final args = ModalRoute.of(context)?.settings.arguments
+              as Map<String, dynamic>;
+          return EventsDetails(data: args);
+        }
         // Add more routes here as needed
       },
     );
