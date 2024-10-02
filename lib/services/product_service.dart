@@ -57,30 +57,42 @@ class ProductService {
       "category_id": "zzz"
     }
   ];
+  List categoriesok = [
+    {
+      "id": "1",
+      "name": "conference",
+      "description": "conf",
+    },
+    {
+      "id": "2",
+      "name": "seminaire",
+      "description": "conf",
+    },
+    {
+      "id": "3",
+      "name": "formation",
+      "description": "conf",
+    },
+    {
+      "id": "4",
+      "name": "voyage",
+      "description": "conf",
+    },
+    {
+      "id": "5",
+      "name": "messe",
+      "description": "conf",
+    },
+  ];
   List getProducts() {
     return products;
   }
 
+  List getCategories() {
+    return categoriesok;
+  }
+
   static Future<List<CategoryModel>> categories() async {
-    // Future<List<CategoryModel>> categories() async {
-    // Simuler une opération asynchrone, comme une requête réseau
-    // await Future.delayed(const Duration(seconds: 1));
-    // final response  =  [
-    //   {
-    //   "id": 1,
-    //   "name": 'Technologie',
-    //   "description": 'Produits technologiques',
-    //   },
-    //   {
-    //   "id": 2,
-    //   "name": 'physique',
-    //   "description": 'Produits phys',
-    //   }
-    // ];
-    // Transformer la réponse en liste de catégories
-    //  print(response);
-    //  return response.toList();
-    // Retourner une liste de catégories
     CategoryModel c =
         CategoryModel(name: 'Technologie dd', description: 'Technologie');
     // print(jsonDecode(c.));

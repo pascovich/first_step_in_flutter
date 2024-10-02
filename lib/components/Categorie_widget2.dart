@@ -31,8 +31,11 @@ class _CategorieWidget2State extends State<CategorieWidget2> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            'Categorie',
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            'Cateories',
+            style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                color: Colors.blueGrey),
           ),
           const SizedBox(
             height: 10,

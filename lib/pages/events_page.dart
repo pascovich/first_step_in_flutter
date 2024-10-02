@@ -3,6 +3,7 @@ import 'package:flutter_app/components/Event_widget.dart';
 import 'package:flutter_app/pages/events_details.dart';
 import 'package:flutter_app/components/Hero_widget.dart';
 import 'package:flutter_app/components/Categorie_widget2.dart';
+import 'package:flutter_app/components/Categorie_widget.dart';
 
 class EventsPage extends StatefulWidget {
   const EventsPage({super.key});
@@ -56,7 +57,7 @@ class _EventsPageState extends State<EventsPage> {
               padding: EdgeInsets.all(8.0),
               child: HeroWidget(),
             ),
-            Padding(padding: EdgeInsets.all(3.0), child: CategorieWidget2()),
+            Padding(padding: EdgeInsets.all(3.0), child: CategorieWidget()),
             Padding(padding: EdgeInsets.only(left: 3.0), child: EventWidget()),
           ],
         ));
