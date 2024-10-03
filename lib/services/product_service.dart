@@ -121,6 +121,7 @@ class ProductService {
   static Future<List<CategoryModel>> categories() async {
     CategoryModel c =
         CategoryModel(name: 'Technologie dd', description: 'Technologie');
+    c;
     // print(jsonDecode(c.));
     return [];
     // return [

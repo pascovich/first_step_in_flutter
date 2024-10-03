@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/components/Event_widget.dart';
-import 'package:flutter_app/pages/events_details.dart';
+// import 'package:flutter_app/pages/events_details.dart';
 import 'package:flutter_app/components/Hero_widget.dart';
-import 'package:flutter_app/components/Categorie_widget2.dart';
+// import 'package:flutter_app/components/Categorie_widget2.dart';
 import 'package:flutter_app/components/Categorie_widget.dart';
 
 class EventsPage extends StatefulWidget {

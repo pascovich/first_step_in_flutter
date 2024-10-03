@@ -1,6 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/events_details.dart';
+// import 'package:flutter_app/pages/events_details.dart';
 import 'package:flutter_app/services/product_service.dart';
 
 class EventWidget extends StatefulWidget {
